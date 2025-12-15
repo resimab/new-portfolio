@@ -1,0 +1,6 @@
+.background{
+    width:400px;
+    height:300px;
+    background-color: #ffa500;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+}
