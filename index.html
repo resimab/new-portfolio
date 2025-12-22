@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Resima</title>
-    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
-<body class="bg-white-50">
+<body class="bg-white">
     <!-- hero section -->
     <header class="h-auto">
-        <nav class="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-lime-950 w-full max-w-7xl text-white px-8 py-4 rounded-full flex justify-between items-center font-sans">
-
+        <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-full max-w-7xl z-50 bg-lime-950 text-white px-4 md:px-8 py-4 rounded-full flex justify-between items-center font-sans" id="nav-bar">
 
             <!-- logo+name -->
             <div class="flex flex-row items-center space-x-2">
@@ -25,7 +22,7 @@
             </div>
 
             <!-- navbar -->
-            <div class="items-center">
+            <div class="hidden md:flex items-center">
             <ul class="flex flex-row space-x-14 items-center">
                 <li><a href="#" class="hover:underline hover:text-yellow-500">Home</a></li>
                 <li><a href="#skills" class="hover:underline hover:text-yellow-500">Skills</a></li>
@@ -35,19 +32,37 @@
             </div>
 
             <!-- contact button -->
-            <button class="bg-white px-6 py-2 text-lime-950 rounded-full font-medium hover:scale-105 transform transition duration-300"><a href="#contact">Contact Me</a></button>
+            <button class="hidden md:block bg-white px-6 py-2 text-lime-950 rounded-full font-medium hover:scale-105 transform transition duration-300"><a href="#contact">Contact Me</a></button>
+
+            <button id="mobile-menu-button" class="md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1.5">
+                <span class="block w-6 h-0.5 bg-white"></span>
+                <span class="block w-6 h-0.5 bg-white"></span>
+                <span class="block w-6 h-0.5 bg-white"></span>
+        </button>
         </nav>
 
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-32 bg-lime-950 text-white transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden">
+    <button id="close-menu-button" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
+     <div class="flex flex-col items-start justify-center h-full px-4 space-y-5">
+        <a href="#" class="text-lg hover:text-yellow-500 hover:underline transition">Home</a>
+        <a href="#skills" class="text-lg hover:text-yellow-500 hover:underline  transition">Skills</a>
+        <a href="#about" class="text-lg hover:text-yellow-500 hover:underline transition">About</a>
+        <a href="#projects" class="text-lg hover:text-yellow-500 hover:underline transition">Projects</a>
+        <a href="#contact" class="text-lg hover:text-yellow-500 hover:underline transition">Contact</a>
+    </div>
+        </div>
+        <div id="mobile-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
         <!-- hero content -->
-        <section class="w-full flex flex-row items-center justify-center my-16 px-32 mt-32 ">
+        <section class="w-full flex flex-row items-center justify-center my-16 px-6 md:px-16 lg:pl-60 mt-32 ">
             <!-- left part -->
             <div class="flex flex-col items-start justify-center w-1/2">
                 <!-- text content -->
                 <div >
-                <p class="inline-block border-2 border-orange-400 px-4 py-1 mb-6  font-normal">Hello There!</p>
+                <p id="typeText" class="inline-block border-2 border-orange-400 px-4 py-1 mb-6  font-normal ">Hello There!</p>
                 <h1 class=" text-5xl mb-6 font-semibold">I'm <span class="text-[#ffa500] font-normal italic underline decoration-2 underline-offset-4">Resima Budhathoki,</span>
                     <br>Web Developer Based in Nepal.</h1>
-                <p class="font-light text-grey-600 mb-8 max-w-lg">I'm an experienced Web Developer with 2+ years in the field, collaboarting with various companies and startups.</p>
+                <p class="font-light text-gray-600 mb-8 max-w-lg">I'm an experienced Web Developer with 2+ years in the field, collaboarting with various companies and startups.</p>
                 </div>
 
                 <!-- buttons -->
@@ -63,7 +78,7 @@
             </div>
 
             <div class="w-1/2 relative flex justify-center items-center">
-                <div class="flex justify-center items-center -z-10 background"><img src="me.png" alt="profile" class="relative w-auto h-[400px] object-cover z-10"></div>
+                <div class="flex justify-center items-center -z-10 w-[400px] h-[300px] bg-[#ffa500] rounded-[30%_70%_70%_30%/30%_30%_70%_70%]"><img src="./photo/me.png" loading="lazy" alt="profile" class="relative w-auto h-[400px] object-cover z-10"></div>
         </section>
         <!-- separation design -->
         <section class="relative">
@@ -95,12 +110,12 @@
         <!-- skills section -->
         <section id="skills">
             <div class="flex flex-col justify-center items-start p-10 ml-16 mr-16 mb-16 ">
-                <p class="font-medium  "><span class="text-yellow-500">-</span> Skills</p>
+                <p class="font-medium text-gray-300"><span class="text-yellow-500">-</span> Skills</p>
 
         <div class="flex flex-row h-auto items-center justify-between w-full mb-10">
         <h1 class="text-5xl font-semibold "><span class="text-yellow-500"><i>Skills</i></span> I Have</h1>
 
-        <div class="flex flex-row items-center bg-yellow-400 rounded-full px-1 py-1 w-60 hover:scale-105 transition">
+        <div class="flex flex-row items-center bg-yellow-400 rounded-full px-1 py-1 w-55 hover:scale-105 transition">
                      <button class="bg-lime-950 text-white px-6 py-3 rounded-full ">View All Skills</button> 
                 <div class="flex items-center justify-center bg-white rounded-full w-12 h-12 ml-4"><svg class="w-5 h-5 fill-black-900 " viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"></path></svg>
@@ -113,26 +128,26 @@
 
             <div class="border-gray-100 rounded-md flex flex-col items-center justify-center  bg-slate-300 hover:scale-105 transition">
                 <div class="flex flex-col items-start justify-center p-6 gap-4">
-                <img src="react.png" class="w-24 h-24">
+                <img src="./photo/react.png" loading="lazy" alt="react logo" class="w-24 h-24">
                 <h1 class="font-bold text-2xl">React</h1>
-                <p class="font-light text-grey-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fuga ad, beatae repudiandae reiciendis voluptas pariatur.....  </p>
+                <p class="font-light text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fuga ad, beatae repudiandae reiciendis voluptas pariatur.....  </p>
                 <a class="text-sky-500 hover:underline hover:cursor-pointer">Learn More</a>
                 </div>
             </div>
 
             <div class="border-gray-100 rounded-md flex flex-col items-center justify-center  bg-slate-300 hover:scale-105 transition">
                 <div class="flex flex-col items-start justify-center p-6 gap-4">
-                <img src="webdesign.png" class="w-24 h-24">
+                <img src="./photo/webdesign.png" loading="lazy" alt="web logo" class="w-24 h-24">
                 <h1 class="font-bold text-2xl">Responsive Web Design</h1>
-                <p class="font-light text-grey-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fuga ad, beatae repudiandae reiciendis voluptas pariatur.....</p>
+                <p class="font-light text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fuga ad, beatae repudiandae reiciendis voluptas pariatur.....</p>
                 <a class="text-sky-500 hover:underline hover:cursor-pointer">Learn More</a></div>
             </div>
 
             <div class="border-gray-100 rounded-md flex flex-col items-star  bg-slate-300 hover:scale-105 transition">
                 <div class="flex flex-col items-start justify-center p-6 gap-4">
-                <img src="ui.png" class="w-24 h-24">
+                <img src="./photo/ui.png" loading="lazy" alt="web logo" class="w-24 h-24">
                 <h1 class="font-bold text-2xl">UI/UX Design</h1>
-                <p class="font-light text-grey-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fuga ad, beatae repudiandae reiciendis voluptas pariatur.....</p>
+                <p class="font-light text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti fuga ad, beatae repudiandae reiciendis voluptas pariatur.....</p>
                 <a class="text-sky-500 hover:underline hover:cursor-pointer">Learn More</a></div>
             </div>
         </div>
@@ -144,13 +159,13 @@
             <div class="flex flex-row justify-center items-center p-16">
             <!-- left section of about me -->
             <div class="w-1/2 flex items-center justify-center">
-                <div class=" bg-yellow-500 w-[340px] rounded-full" >
-                    <img src="profile.jpg" class="w-[330px] h-[390px] rounded-full">
+                <div class=" bg-yellow-500 w-[360px] rounded-full" >
+                    <img src="./photo/profile.jpg" loading="lazy" alt="my profile" class="w-[330px] h-[390px] rounded-full">
                 </div>
             </div>
             <!-- about me right -->
             <div class="flex flex-col items-start justify-center gap-4 w-1/2">
-                <p class="font-medium"><span class="text-yellow-500">-</span> About Me</p>
+                <p class="font-medium text-gray-300"><span class="text-yellow-500">-</span> About Me</p>
                 
         <h1 class="text-5xl font-semibold ">Who is <span class="text-yellow-500"><i>Resima?</i></span></h1>
                 <p class="text-gray-500 text-sm font-medium mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus,<br> repellat dignissimos
@@ -188,7 +203,7 @@
         <!-- projects of mine -->
         <section id="projects">
             <div class="flex flex-col items-start justify-center p-16 gap-4">     
-            <p class="font-medium  "><span class="text-yellow-500">-</span> My Portfilio</p>
+            <p class="font-medium text-gray-300 "><span class="text-yellow-500">-</span> My Portfilio</p>
             
             <div class="flex flex-row h-auto items-center justify-between w-full mb-6 ">
                 <h1 class="text-5xl font-semibold ">My Latest<span class="text-yellow-500"><i> Projects</i></span></h1>
@@ -205,40 +220,40 @@
 
             <div class="border-gray-100 rounded-md flex flex-col items-center justify-center  bg-slate-300 hover:scale-105 transition">
                 <div class="flex flex-col items-start justify-center p-6 gap-6">
-                <img src="web.jpg" class="w-full h-full">
+                <img src="./photo/web.jpg" loading="lazy" alt="web" class="w-full h-full">
                 <div>
                 <a class="font-normal text-sm bg-yellow-400 rounded-full p-3">UI/UX Design</a>
                 <a class="font-normal text-sm bg-yellow-400 rounded-full p-3">App Design</a>
                 <a class="font-normal text-sm bg-yellow-400 rounded-full p-3">Wireframe</a>
                 </div>
 
-                <p class="font-bold text-2xl text-grey-600">Beauty Product - Ecommerce Mobile App Solution</p>
+                <p class="font-bold text-2xl text-gray-600">Beauty Product - Ecommerce Mobile App Solution</p>
                 </div>
             </div>
 
             <div class="border-gray-100 rounded-md flex flex-col items-center justify-center  bg-slate-300 hover:scale-105 transition">
                 <div class="flex flex-col items-start justify-center p-6 gap-6">
-                <img src="ecommerce.jpg" class="w-full h-full">
+                <img src="./photo/ecommerce.jpg" loading="lazy" alt="ecommerce" class="w-full h-full">
                 <div>
                 <a class="font-normal text-sm bg-yellow-400 rounded-full p-3">UI/UX Design</a>
                 <a class="font-normal text-sm bg-yellow-400 rounded-full p-3">App Design</a>
                 <a class="font-normal text-sm bg-yellow-400 rounded-full p-3">Wireframe</a>
                 </div>
 
-                <p class="font-bold text-2xl text-grey-600">Ecommerce - Ecommerce Mobile App Solution</p>
+                <p class="font-bold text-2xl text-gray-600">Ecommerce - Ecommerce Mobile App Solution</p>
                 </div>
             </div>
             
             <div class="border-gray-100 rounded-md flex flex-col items-center justify-center  bg-slate-300 hover:scale-105 transition">
                 <div class="flex flex-col items-start justify-center p-6 gap-6">
-                <img src="banking.jpg" class="w-full h-full">
+                <img src="./photo/banking.jpg" loading="lazy" alt="banking" class="w-full h-full">
                 <div>
                 <a class="font-normal text-sm bg-yellow-400 rounded-full p-3">UI/UX Design</a>
                 <a class="font-normal text-sm bg-yellow-400 rounded-full p-3">App Design</a>
                 <a class="font-normal text-sm bg-yellow-400 rounded-full p-3">Wireframe</a>
                 </div>
 
-                <p class="font-bold text-2xl text-grey-600">Sanima Bank - Mobile App Solution</p>
+                <p class="font-bold text-2xl text-gray-600">Sanima Bank - Mobile App Solution</p>
                 </div>
             </div>
             
@@ -273,6 +288,10 @@
         </div>
     </div>
     </footer>
-    
+    <script src="script.js"></script>
+
+
+</body>
+</html>
 </body>
 </html>
