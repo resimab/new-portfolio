@@ -17,7 +17,7 @@
     closeButton.addEventListener('click', () => {
         mobileMenu.classList.add('translate-x-full');
         overlay.classList.add('hidden');
-        // navbar.classList.add('');
+        navbar.classList.remove('hidden');
     });
 
     // Close menu when clicking overlay
@@ -56,4 +56,38 @@ function typeWriter() {
 }
 
 typeWriter();
+
+// for shorter and longer text
+function toggleText() {
+  const text = document.getElementById("react-text");
+  const btn = event.target;
+
+  text.classList.toggle("line-clamp-2");
+
+  btn.textContent = text.classList.contains("line-clamp-2")
+    ? "Learn More"
+    : "Show Less";
+}
+
+function toggleText() {
+  const text = document.getElementById("webdesign-text");
+  const btn = event.target;
+
+  text.classList.toggle("line-clamp-2");
+
+  btn.textContent = text.classList.contains("line-clamp-2")
+    ? "Learn More"
+    : "Show Less";
+}
+function toggleText() {
+  const text = document.getElementById("uiux-text");
+  const btn = event.target;
+
+  text.classList.toggle("line-clamp-2");
+
+  btn.textContent = text.classList.contains("line-clamp-2")
+    ? "Learn More"
+    : "Show Less";
+}
+
 
